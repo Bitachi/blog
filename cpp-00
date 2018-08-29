@@ -8,7 +8,7 @@ int card[7][7];   //ビンゴカード
 int p;            //作業用変数
 int i, j;         //作業用変数
 
-void format_array() //配列を初期化する関数
+void format_array() //配列の全要素を0で初期化する関数
 {
   int i;
   for(i = 0; i < 100; i++)
@@ -17,7 +17,7 @@ void format_array() //配列を初期化する関数
   }
 }
 
-int random_num()    //乱数を繰り出す関数
+int random_num()    //乱数を重複なく繰り出す関数
 {
   while(1)
   {
@@ -30,7 +30,7 @@ int random_num()    //乱数を繰り出す関数
   }
 }
 
-void make_card()
+void make_card()    //ビンゴカードを作る関数
 {
   for(i = 0; i < 7; i++)
   {
@@ -46,7 +46,7 @@ void make_card()
   }
 }
 
-void print_card()
+void print_card()   //ビンゴカードを表示する関数
 {
   for(i = 0; i < 7; i++)
   {
@@ -65,7 +65,7 @@ void print_card()
   }
 }
 
-int check_num(int p)
+int check_num(int p)    //値がビンゴカードにあるかどうか探索する関数
 {
     for(i = 0; i < 7; i++)
     {
@@ -84,7 +84,7 @@ int check_num(int p)
     return 1;
   }
 
-int check_bingo()
+int check_bingo()   //ビンゴがあるかどうか探索する関数
 {
   /*-----縦方向のビンゴ探索-----*/
   for(j = 0; j < 7; j++)
